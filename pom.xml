@@ -71,6 +71,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>iot</finalName>
 	</build>
 
 </project>
