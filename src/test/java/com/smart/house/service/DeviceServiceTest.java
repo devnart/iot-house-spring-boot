@@ -41,6 +41,5 @@ class DeviceServiceTest {
     void updateDevice() {
         when(deviceRepository.save(device)).thenReturn(device);
         assertEquals(device, deviceService.updateDevice(device));
-
     }
 }
