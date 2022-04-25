@@ -19,4 +19,5 @@ public class Device {
     private String id;
     private int number;
     private Status status;
+    private String roomId;
 }
