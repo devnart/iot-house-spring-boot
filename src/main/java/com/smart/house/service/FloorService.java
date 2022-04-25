@@ -38,4 +38,8 @@ public class FloorService {
 
     public void deleteFloor(String id) {
     }
+
+    public Floor updateFloor(Floor floor) {
+        return floorRepository.save(floor);
+    }
 }

@@ -14,8 +14,8 @@ public class DeviceService {
         this.deviceRepository = deviceRepository;
     }
 
-    public void addDevice(Device device) {
-        deviceRepository.save(device);
+    public Device addDevice(Device device) {
+        return deviceRepository.save(device);
     }
 
     public void deleteDevice(String id) {
@@ -26,7 +26,11 @@ public class DeviceService {
         return deviceRepository.findAll();
     }
 
-    public void updateDevice(Device device) {
-        deviceRepository.save(device);
+    public Device updateDevice(Device device) {
+        return deviceRepository.save(device);
+    }
+
+    public Object getDevice(String id) {
+        return deviceRepository.findById(id);
     }
 }
