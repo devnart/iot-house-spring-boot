@@ -14,6 +14,7 @@ import java.util.List;
 import static org.mockito.Mockito.when;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 @ExtendWith(MockitoExtension.class)
 class DeviceServiceTest {
 
@@ -23,7 +24,8 @@ class DeviceServiceTest {
     @Mock
     DeviceRepository deviceRepository;
 
-    Device device = new Device("kshksdh",2, Status.OFF);
+    Device device = new Device("kshksdh",2, Status.OFF,"ksdjsd");
+
     @Test
     void addDevice() {
         when(deviceRepository.save(device)).thenReturn(device);
