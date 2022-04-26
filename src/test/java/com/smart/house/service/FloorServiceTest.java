@@ -28,8 +28,8 @@ class FloorServiceTest {
     void findAll() {
         List<Floor> floors = new ArrayList<>();
         floors.add(floor);
-        assertEquals(floors,floorService.findAll());
-
+        when(floorRepository.findAll()).thenReturn(floors);
+        assertEquals(floors.size(),floorService.findAll().size());
     }
 
     @Test
